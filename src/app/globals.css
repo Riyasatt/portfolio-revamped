@@ -1,33 +1,258 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  .text-gradient{
+    @apply bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent
+  }
+
+  .bg-gradient{
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 
+  }
+
+  .animate-char-in
+{
+  animation: char-anim 1s cubic-bezier(.69,.13,0,1.39) forwards;
+  display: block;
+  translate: 0 100%;
+  animation-timeline: view();
+  opacity: 0;
+  animation-range: entry 0 cover 60%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.animate-char-in-onReload
+{
+  animation: char-anim 0.5s cubic-bezier(.69,.13,0,1.39) forwards ;
+  display: inline-block;
+  translate: 0 100%;
+  opacity: 0;
+}
+
+.animate-char-out
+{
+  animation: char-anim-2 .5s cubic-bezier(.69,.13,0,1.39) forwards;
+  display: inline-block;
+  
+
+  /* translate: 0 100%; */
+}
+@keyframes char-anim {
+  0%   {
+    translate: 0 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+@keyframes char-anim-2 {
+  0%   {translate: 0 0;}
+  100% {translate: 0 -100%;}
+}
+
+
+.animate-appearSide{
+  animation: appearSide .2s ease-in-out ;
+  display: block;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+.animate-appearSideOnReload{
+  animation: appearSide .2s ease-in-out ;
+  translate: 0 100;
+  display: block;
+  animation-range: entry 0 cover 40%;
+}
+
+
+
+.animate-appearSideReverse{
+  animation: appearSideReverse .2s ease-in-out ;
+  display: block;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+.animate-appearSideReverseOnReload{
+  animation: appearSideReverse .2s ease-in-out ;
+  display: block;
+  translate: 0 100;
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes appearSide{
+  from {
+    opacity: 0;
+    transform : translateX(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform : translateX(0px);
+  }
+}
+@keyframes appearSideReverse{
+  from {
+    opacity: 0;
+    transform : translateX(-10%);
+  }
+
+  to {
+    opacity: 1;
+    transform : translateX(0px);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.animate-fadeImage{
+  animation: fadeImage .5s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes fadeImage{
+  0% {
+    filter: grayscale(100%);
   }
+  100% {
+    filter: grayscale(0%);
+  }
+}
+
+.animate-growAppear{
+  animation: growAppear 2s  ;
+  display: block;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+  /* opacity: 0; */
+}
+
+
+@keyframes growAppear {
+  0%{
+    /* opacity: 0; */
+    clip-path: inset(0 100% 0 0);
+    /* opacity: 0; */
+  }
+  100%{
+    /* opacity: 1; */
+    clip-path: inset(0 0 0 0);
+    /* opacity : 1; */
+  }
+}
+.fill-hover
+{
+  @apply [&>*]:z-10 [&>*]:relative hover:before:w-full before:w-0 before:absolute before:duration-300 before:top-0 before:right-0 hover:before:left-0 before:scale-150 before:rounded-full overflow-clip before:h-full before:bg-accent3 
+}
+.fill-hover2
+{
+  @apply [&>*]:z-10 [&>*]:relative hover:before:w-full before:w-0 before:absolute before:duration-300 before:top-0 before:right-0 hover:before:left-0 before:scale-150 before:rounded-full overflow-clip before:h-full before:bg-gradient-to-r before:from-blue-400 before:to-blue-600
+}
+.fill-hover3
+{
+  @apply [&>*]:z-10 [&>*]:relative hover:before:w-full before:w-0 before:absolute before:duration-300 before:top-0 before:right-0 hover:before:left-0 before:scale-150 before:rounded-full overflow-clip before:h-full  before:bg-slate-900/30
+}
+
+.text-fade{
+  @apply text-white/70
+}
+
+.addBorder{
+  @apply border-2 rounded-lg backdrop-blur-md
+}
+
+
+
+
+
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(59 130 246);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+html{
+  scroll-behavior: smooth;
+  /* scroll-padding: 50px; */
 }
