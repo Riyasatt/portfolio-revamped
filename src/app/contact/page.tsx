@@ -1,6 +1,6 @@
+import Contact from '@/components/Contact/Contact'
+import Socials from '@/components/Socials/Socials'
 import React from 'react'
-import Socials from '../components/Socials/Socials'
-import Contact from '../components/Contact/Contact'
 
 const page = () => {
   return (

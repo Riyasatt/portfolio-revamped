@@ -1,73 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
+import { projects } from '../../../constants/data'
 
-export const projects = [
-  {
-    id:1,
-    'groupTitle' : "FRONTEND",
-    data : [
-      {
-        id:1,
-        title : 'Crypto Trackr',
-        description : 'API Based application for real-time information of any cryptocurrency',
-        message : "MODERN GAMBLING?",
-        link: 'https://lustrous-crypto-trackr.netlify.app/',
-        github: ''
-      },{
-        id:2,
-        title : 'Portfolio',
-        description : '',
-        message : "NOT THE SAME ONE :)",
-        link: 'https://riyasatali.vercel.app/',
-        github: ''
-      },
-      {
-        id:3,
-        title : 'Portfolio AGAIN ✌️',
-        description : '',
-        message : "INFINITE LOOP?.. I GUESS",
-        link: 'https://createwithriyasat.vercel.app',
-        github: ''
-      },
-      {
-        id:4,
-        title : 'Blood Bridge',
-        description : '',
-        message : "",
-        link: 'https://blood-bridge-rouge.vercel.app/',
-        github: ''
-      }
-    ]
-  },
-  {
-    id:2,
-    'groupTitle' : "FULLSTACK",
-    data : [
-      {
-        id:1,
-        title : 'Asli FeedBack ',
-        description : 'Send Feedback to anyone anonymously',
-        message : "TRUE FEEDBACK IS BITTER.. AGREE?",
-        link: 'https://asli-feedback.vercel.app/',
-        github: ''
-      },{
-        id:2,
-        title : 'Form Genius',
-        description : 'Create forms with the help of AI and integrate with Google Forms',
-        message : "ONLY CODE.. DEPLOYING THIS NEEDS MONEY :(",
-        link: 'https://github.com/Riyasatt/FormGenius',
-        github: ''
-      },
-    ]
-  }
-]
+
 
 const page = () => {
   return (
     <div className='min-h-screen  mt-60'>
       {projects.map((group,index)=>{
         return (
-          <div key={index} className='animate-appearSideRide mb-20 '>
+          <div id={group.groupTitle} key={index} className='animate-appearSideRide mb-20 '>
         <div className="animate-char-in mb-5 mx-5 animate-char-in-onReload text-3xl md:text-6xl lg:text-8xl font-extrabold ">
         {group.groupTitle} <span className="text-gradient  ">Projects</span>
         </div>
