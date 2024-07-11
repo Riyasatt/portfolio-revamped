@@ -9,7 +9,7 @@ const FullStack = () => {
     <div className="relative  animate-appearSide  my-10 ">
        <div className="w-60 h-60 blur-3xl bg-blue-500/20 absolute right-[35%] top-60 rounded-full -z-10"></div>
        <div className="w-40 h-40 blur-3xl bg-white/20 absolute right-16 top-10  rounded-full -z-10"></div>
-      <div className="text-fade text-lg md:text-2xl font-extrabold ">
+      <div className="text-fade animate-disappear text-lg md:text-2xl font-extrabold ">
         I PROVIDE
       </div>
       <div className="animate-char-in  text-3xl md:text-6xl lg:text-8xl font-extrabold ">

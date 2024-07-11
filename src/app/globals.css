@@ -212,6 +212,21 @@
     clip-path: inset(0 0 0 0);
     /* opacity : 1; */
   }
+  
+}
+
+.animate-disappear{
+  animation : disappear 0.5s;
+  animation-timeline: view(); 
+}
+
+@keyframes disappear {
+  0%{
+    opacity :1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 .fill-hover
 {

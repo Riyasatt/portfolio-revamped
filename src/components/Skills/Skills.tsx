@@ -27,7 +27,7 @@ const Skills = () => {
             {skillGroup.data.map((skills,index)=>{
                 return (
                     <span key={index} className=" rounded-lg relative  font-bold bg-gray-700 flex items-center  justify-between ">
-              <span className={` h-3 rounded-lg p-6 bg-gradient animate-growAppear  ${skills.prog} flex items-center`}>
+              <span className={` h-3 rounded-lg p-6 bg-gradient animate-growAppear  ${skills.prog} flex items-center`} style={{width:`${skills.progress}%`}}>
                 <div className="h-full flex items-center ">
                 {skills.name}
                 </div>

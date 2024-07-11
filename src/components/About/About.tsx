@@ -33,14 +33,17 @@ const About = () => {
     </Marquee>
     {
       pathname === '/about' &&
-      <div className='absolute flex  lg:hidden z-10 top-32 w-full justify-center'>
-        <Image alt='Riyasat' height={300} width={300} src='/man.png' className=' animate-fadeImage  w-auto h-auto   relative -top-72 ' />
+      <div className='absolute flex  lg:hidden z-10 -top-10 w-[calc(100vw-50px)] justify-center '>
+        <Image alt='Riyasat' height={300} width={300} src='/man.png' className=' animate-fadeImage  w-auto h-auto    ' />
           
       </div>
     }
     </div>
     <div className='container mb-20  flex justify-between'>
       <div className='max-w-2xl mt-20 flex-1 lg:flex-auto animate-appearSide animate-appearSideOnReload '>
+        {
+          pathname === '/about' && <div className='h-40 am:h-60 lg:hidden'></div>
+        }
         <div>
         <div className='animate-char-in text-4xl border-b-4 border-blue-500 pb-4 mb-5  md:text-5xl lg:text-6xl font-extrabold'>
         K<span className='text-gradient'>.</span> RIYASAT <span className='text-gradient'>ALI</span>
