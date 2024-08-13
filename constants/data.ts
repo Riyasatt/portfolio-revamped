@@ -77,6 +77,13 @@ export const projects : Array<ProjectGroup> = [
           message : "ONLY CODE.. DEPLOYING THIS NEEDS MONEY :(",
           link: 'https://github.com/Riyasatt/FormGenius',
           github: ''
+        },{
+          id:3,
+          title : 'Chess.com',
+          description : 'A clone of multi-player chess game chess.com using web socket',
+          message : '',
+           link : '',
+          github: ''
         },
       ]
     }
@@ -209,6 +216,11 @@ export const allSkills : Array<AllSkills> = [
                 name : "POSTGRESSQL",
                 progress : 75,
                 prog : "w-[75%]"
+            },{
+                id: 5,
+                name : "WEBSOCKETS",
+                progress : 30,
+                prog : "w-[30%]"
             },
         ]
     },{
