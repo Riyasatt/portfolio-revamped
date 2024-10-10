@@ -79,6 +79,13 @@ export const projects : Array<ProjectGroup> = [
           github: ''
         },{
           id:3,
+          title : 'Flicker Chat App',
+          description : 'A real time chat app, includes image and video sharing also',
+          message : 'Includes Complex features like image and video sending',
+           link : 'https://github.com/Riyasatt/Flicker-Chat-App',
+          github: 'https://github.com/Riyasatt/Flicker-Chat-App'
+        },{
+          id:4,
           title : 'Chess.com',
           description : 'A clone of multi-player chess game chess.com using web socket',
           message : '',
