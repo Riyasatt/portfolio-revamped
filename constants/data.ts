@@ -56,9 +56,8 @@ export const projects : Array<ProjectGroup> = [
           message : "",
           link: 'https://blood-bridge-rouge.vercel.app/',
           github: ''
-        }
-      ]
-    },{
+        },
+          {
           id:5,
           title : 'Destion.in',
           description : 'Frontend for a company that hires talented designers making websites, mobile apps and cloud solutions',
@@ -66,6 +65,8 @@ export const projects : Array<ProjectGroup> = [
           link: 'https://destion-zhlc8jggb-riyasats-projects-cd93b726.vercel.app/',
           github: ''
         }
+      ]
+    },
     {
       id:2,
       'groupTitle' : "FULLSTACK",
