@@ -56,6 +56,14 @@ export const projects : Array<ProjectGroup> = [
           message : "",
           link: 'https://blood-bridge-rouge.vercel.app/',
           github: ''
+        },
+          {
+          id:5,
+          title : 'Destion.in',
+          description : 'Frontend for a company that hires talented designers making websites, mobile apps and cloud solutions',
+          message : "DESTION.IN",
+          link: 'https://destion-zhlc8jggb-riyasats-projects-cd93b726.vercel.app/',
+          github: ''
         }
       ]
     },
@@ -83,6 +91,20 @@ export const projects : Array<ProjectGroup> = [
           description : 'Create forms with the help of AI and integrate with Google Forms',
           message : "ONLY CODE.. DEPLOYING THIS NEEDS MONEY :(",
           link: 'https://github.com/Riyasatt/FormGenius',
+          github: ''
+        },{
+          id:3,
+          title : 'Flicker Chat App',
+          description : 'A real time chat app, includes image and video sharing also',
+          message : 'Includes Complex features like image and video sending',
+           link : 'https://github.com/Riyasatt/Flicker-Chat-App',
+          github: 'https://github.com/Riyasatt/Flicker-Chat-App'
+        },{
+          id:4,
+          title : 'Chess.com',
+          description : 'A clone of multi-player chess game chess.com using web socket',
+          message : '',
+           link : '',
           github: ''
         },
       ]
@@ -216,6 +238,11 @@ export const allSkills : Array<AllSkills> = [
                 name : "POSTGRESSQL",
                 progress : 75,
                 prog : "w-[75%]"
+            },{
+                id: 5,
+                name : "WEBSOCKETS",
+                progress : 30,
+                prog : "w-[30%]"
             },
         ]
     },{
