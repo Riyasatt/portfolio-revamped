@@ -12,10 +12,10 @@ const About = () => {
   const pathname = usePathname()
 
   return (
-    <div className='px-5 w-full  relative '>
+    <div className='px-5 w-full pt-20 relative '>
       <div className=' '>
         <div className=''>
-      <Marquee direction='right' className='border-t'>
+      <Marquee direction='right' className='' speed={40} >
     <div className='  text-6xl pb-4 lg:text-9xl font-extrabold  '>
     <span>Who <span className='text-gradient'>am I&nbsp;</span></span><span>Who <span className='text-gradient'>am I&nbsp;</span></span><span>Who <span className='text-gradient'>am I&nbsp;</span></span>
     </div>
@@ -26,7 +26,7 @@ const About = () => {
     私自身</span><span className='text-gradient tracking-tighter'>リヤサットアリ</span>
     </div>
     </Marquee>
-    <Marquee direction='right' className='border-b relative -top-10 opacity-35'>
+    <Marquee direction='right' className=' relative -top-10 opacity-35'>
     <div className='  text-6xl pb-4 lg:text-9xl font-extrabold  '>
     <span>About <span className='text-gradient'>ME&nbsp;</span></span><span>About <span className='text-gradient'>ME&nbsp;</span></span><span>About <span className='text-gradient'>ME&nbsp;</span></span>
     </div>

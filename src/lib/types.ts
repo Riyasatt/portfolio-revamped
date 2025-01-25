@@ -38,5 +38,16 @@ export interface AllSkills {
     data :Array<SkillData>
 }
 
+export interface WorkExperience {
+    id:number,
+    company : string,
+    position : string,
+    role : string,
+    duration : string,
+    description : string,
+    link : string,
+
+}
+
 
 

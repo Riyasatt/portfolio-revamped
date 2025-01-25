@@ -1,4 +1,4 @@
-import {  AllSkills, navbarLinks, ProjectGroup, shortSkills } from "@/lib/types";
+import {  AllSkills, navbarLinks, ProjectGroup, shortSkills, WorkExperience } from "@/lib/types";
 
 
 export const navLinks :Array<navbarLinks> =[
@@ -7,16 +7,16 @@ export const navLinks :Array<navbarLinks> =[
         url:"/",
         key:1
     },{
-        name: "Services",
-        url:"/services",
+        name: "About",
+        url:"/about",
         key:2
     },{
         name: "Projects",
         url:"/projects",
         key:3
     },{
-        name: "About",
-        url:"/about",
+        name: "Services",
+        url:"/services",
         key:4
     }
 ]
@@ -65,13 +65,20 @@ export const projects : Array<ProjectGroup> = [
       data : [
         {
           id:1,
+          title : 'Scholarship Distribution System',
+          description : 'A system that seamlessly integrate 3 types of user for PMSSS scholarship scheme',
+          message : "TEAM PROJECT FOR HACKATHON.",
+          link: 'https://pmsss-weld.vercel.app/',
+          github: ''
+        },{
+          id:2,
           title : 'Asli FeedBack ',
           description : 'Send Feedback to anyone anonymously',
           message : "TRUE FEEDBACK IS BITTER.. AGREE?",
           link: 'https://asli-feedback.vercel.app/',
           github: ''
         },{
-          id:2,
+          id:3,
           title : 'Form Genius',
           description : 'Create forms with the help of AI and integrate with Google Forms',
           message : "ONLY CODE.. DEPLOYING THIS NEEDS MONEY :(",
@@ -285,6 +292,18 @@ export const allSkills : Array<AllSkills> = [
             },
         ]
     }
+]
+
+export const workExperience : Array<WorkExperience> =[
+  {
+    id: 1,
+    company : "Victorizz",
+    position : "Full Stack Developer",
+    role : "INTERN",
+    duration : "JAN 2025 - PRESENT",
+    description : "redesigned the UI, optimized the backend, enabled multi-user support, added secure authentication, integrated Cloudinary for file uploads, and improved data handling for better performance..",
+    link : "https://www.victorizz.com/arena/trending"
+  },
 ]
 
 

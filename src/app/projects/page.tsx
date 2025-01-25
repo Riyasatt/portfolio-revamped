@@ -19,11 +19,11 @@ const page = () => {
               <div className='container md:flex items-center justify-between py-10'>
               <div className='text-3xl md:text-4xl lg:text-6xl font-extrabold '>
                 {project.title}
-                <div className='opacity-0 group-hover:opacity-100 text-lg  transition-all duration-500 text-fade'>
+                <div className='opacity-0 lg:group-hover:opacity-100 text-lg  transition-all duration-500 text-fade'>
                     {project.message}
                 </div>
               </div>
-              <div className='  text-fade'>
+              <div className='  text-fade '>
                 {project.description}
               </div>
               </div>
