@@ -14,7 +14,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-background/50 backdrop-blur-lg fixed top-0 w-full z-40">
+    <header className="bg-background/70 backdrop-blur fixed top-0 w-full z-40">
       <div className="mx-auto max-w-screen-xl px-6  lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12 ">
