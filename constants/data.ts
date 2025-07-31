@@ -72,6 +72,13 @@ export const projects : Array<ProjectGroup> = [
       'groupTitle' : "FULLSTACK",
       data : [
         {
+          id:3,
+          title : 'Form Genius',
+          description : 'Create forms with the help of AI and integrate with Google Forms',
+          message : "ONLY CODE.. DEPLOYING THIS NEEDS MONEY :(",
+          link: 'https://www.youtube.com/watch?v=-olODJnQ-H8',
+          github: ''
+        },{
           id:1,
           title : 'Scholarship Distribution System',
           description : 'A system that seamlessly integrate 3 types of user for PMSSS scholarship scheme',
@@ -84,13 +91,6 @@ export const projects : Array<ProjectGroup> = [
           description : 'Send Feedback to anyone anonymously',
           message : "TRUE FEEDBACK IS BITTER.. AGREE?",
           link: 'https://asli-feedback.vercel.app/',
-          github: ''
-        },{
-          id:3,
-          title : 'Form Genius',
-          description : 'Create forms with the help of AI and integrate with Google Forms',
-          message : "ONLY CODE.. DEPLOYING THIS NEEDS MONEY :(",
-          link: 'https://github.com/Riyasatt/FormGenius',
           github: ''
         },{
           id:3,
